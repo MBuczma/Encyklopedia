@@ -17,6 +17,9 @@ public:
     GlowneOkno(QWidget *parent = nullptr);
     ~GlowneOkno();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::GlowneOkno *ui;
 };
