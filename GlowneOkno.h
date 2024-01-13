@@ -18,7 +18,8 @@ public:
     ~GlowneOkno();
 
 private slots:
-    void on_pushButton_clicked();
+    void play();
+
 
 private:
     Ui::GlowneOkno *ui;
