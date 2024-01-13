@@ -18,8 +18,8 @@ public:
     ~GlowneOkno();
 
 private slots:
-    void play();
-
+    void quit();
+    void informacje();
 
 private:
     Ui::GlowneOkno *ui;
