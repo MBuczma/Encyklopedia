@@ -5,13 +5,7 @@
 #include <QMainWindow>
 #include "ui_GlowneOkno.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class InformacjeOkno;
-}
-QT_END_NAMESPACE
-
-class InformacjeOkno : public QMainWindow, private Ui::GlowneOkno
+class InformacjeOkno : public QMainWindow, public Ui::GlowneOkno
 {
     Q_OBJECT
 

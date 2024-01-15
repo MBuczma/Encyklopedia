@@ -18,6 +18,7 @@ GlowneOkno::~GlowneOkno()
 
 void GlowneOkno::informacje()
 {
+    qDebug() << "Przycisk informacje został naciśnięty.";
     ui->stackedWidget->setCurrentIndex(1);
 }
 
