@@ -17,12 +17,12 @@ class GlowneOkno : public QMainWindow
 public:
     GlowneOkno(QWidget *parent = nullptr);
     ~GlowneOkno();
+    Ui::GlowneOkno *ui;
+
+private:
 
 private slots:
     void quit();
     void informacje();
-
-private:
-    Ui::GlowneOkno *ui;
 };
 #endif // GLOWNEOKNO_H

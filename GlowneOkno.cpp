@@ -1,6 +1,9 @@
 // GlowneOkno.cpp
 #include "GlowneOkno.h"
 #include "ui_GlowneOkno.h"
+#include "InformacjeOkno.h"
+
+#include <QDebug>
 
 GlowneOkno::GlowneOkno(QWidget *parent)
     : QMainWindow(parent)
@@ -18,7 +21,9 @@ GlowneOkno::~GlowneOkno()
 
 void GlowneOkno::informacje()
 {
+    InformacjeOkno *InformacjeOknoObiekt = new InformacjeOkno(this);
     qDebug() << "Przycisk informacje został naciśnięty.";
+    setWindowTitle("Zmiana1");
     ui->stackedWidget->setCurrentIndex(1);
 }
 

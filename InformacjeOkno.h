@@ -2,19 +2,21 @@
 #ifndef INFORMACJEOKNO_H
 #define INFORMACJEOKNO_H
 
-#include <QMainWindow>
-#include "ui_GlowneOkno.h"
+#include <QWidget>
+#include "GlowneOkno.h"
 
-class InformacjeOkno : public QMainWindow, public Ui::GlowneOkno
+class InformacjeOkno : public QWidget
 {
     Q_OBJECT
 
 public:
-    InformacjeOkno(QWidget *parent = nullptr);
+    explicit InformacjeOkno(GlowneOkno* glowneOkno, QWidget *parent = nullptr);
     ~InformacjeOkno();
+
+private:
+    GlowneOkno* m_glowneOkno;
 
 private slots:
     void powrot();
 };
-
 #endif // INFORMACJEOKNO_H

@@ -1,3 +1,4 @@
+// main.cpp
 #include "GlowneOkno.h"
 #include <QApplication>
 
