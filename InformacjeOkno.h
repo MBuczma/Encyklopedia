@@ -3,23 +3,25 @@
 
 #include <QWidget>
 
+QT_BEGIN_NAMESPACE
 namespace Ui {
 class InformacjeOkno;
 }
+QT_END_NAMESPACE
 
 class InformacjeOkno : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit InformacjeOkno(QWidget *parent = nullptr);
+     InformacjeOkno(QWidget *parent = nullptr);
     ~InformacjeOkno();
 
 private slots:
     void powrot();
 
 private:
-    Ui::InformacjeOkno *ui;
+
 };
 
 #endif // INFORMACJEOKNO_H

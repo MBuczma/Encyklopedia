@@ -1,5 +1,4 @@
 #include "GlowneOkno.h"
-#include "InformacjeOkno.h"
 #include "ui_GlowneOkno.h"
 #include <QMediaPlayer>
 #include <QFileInfo>
@@ -23,10 +22,7 @@ GlowneOkno::~GlowneOkno()
 
 void GlowneOkno::informacje()
 {
-    InformacjeOkno *secondWindow = new InformacjeOkno;
-    this->hide();
-    secondWindow->show();
-
+    ui->stackedWidget->setCurrentIndex(1);
 }
 
 void GlowneOkno::quit()
