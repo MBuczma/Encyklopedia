@@ -20,8 +20,7 @@ HEADERS += \
     InformacjeOkno.h
 
 FORMS += \
-    GlowneOkno.ui \
-    InformacjeOkno.ui
+    GlowneOkno.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

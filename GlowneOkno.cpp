@@ -1,10 +1,6 @@
+// GlowneOkno.cpp
 #include "GlowneOkno.h"
 #include "ui_GlowneOkno.h"
-#include <QMediaPlayer>
-#include <QFileInfo>
-#include <QThread>
-#include <QAudioOutput>
-
 
 GlowneOkno::GlowneOkno(QWidget *parent)
     : QMainWindow(parent)

@@ -1,7 +1,9 @@
+// InformacjeOkno.h
 #ifndef INFORMACJEOKNO_H
 #define INFORMACJEOKNO_H
 
-#include <QWidget>
+#include <QMainWindow>
+#include "ui_GlowneOkno.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -9,19 +11,16 @@ class InformacjeOkno;
 }
 QT_END_NAMESPACE
 
-class InformacjeOkno : public QWidget
+class InformacjeOkno : public QMainWindow, private Ui::GlowneOkno
 {
     Q_OBJECT
 
 public:
-     InformacjeOkno(QWidget *parent = nullptr);
+    InformacjeOkno(QWidget *parent = nullptr);
     ~InformacjeOkno();
 
 private slots:
     void powrot();
-
-private:
-
 };
 
 #endif // INFORMACJEOKNO_H

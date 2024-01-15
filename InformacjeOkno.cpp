@@ -1,23 +1,21 @@
+// InformacjeOkno.cpp
 #include "InformacjeOkno.h"
-#include "ui_GlowneOkno.h"
+#include <QDebug>
 
 InformacjeOkno::InformacjeOkno(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::GlowneOkno)
-    , GlowneOkno
+    : QMainWindow(parent)
 {
-    //ui->setupUi(this);
+    setupUi(this);
     connect(ui->pushButtonPowrot, SIGNAL(clicked()), this, SLOT(powrot()));
 }
 
 InformacjeOkno::~InformacjeOkno()
 {
-    delete ui;
 }
 
 void InformacjeOkno::powrot()
 {
+    qDebug() << "Przycisk powrót został naciśnięty.";
     setWindowTitle("Zmiana");
-    ui->stackedWidget->setCurrentIndex(0);
-
+    stackedWidget->setCurrentIndex(0);  // Zmiana z ui-> na bezpośrednie odwołanie do stackedWidget
 }
