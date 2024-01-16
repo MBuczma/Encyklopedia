@@ -12,15 +12,19 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs depr
 
 SOURCES += \
     InformacjeOkno.cpp \
+    WidokPC.cpp \
     main.cpp \
     GlowneOkno.cpp
 
 HEADERS += \
     GlowneOkno.h \
-    InformacjeOkno.h
+    InformacjeOkno.h \
+    WidokPC.h
 
 FORMS += \
-    GlowneOkno.ui
+    GlowneOkno.ui \
+    InformacjeOkno.ui \
+    WidokPC.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

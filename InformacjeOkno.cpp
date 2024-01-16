@@ -1,22 +1,22 @@
 // InformacjeOkno.cpp
 #include "InformacjeOkno.h"
-#include "ui_GlowneOkno.h"
+#include "ui_InformacjeOkno.h"
 
-InformacjeOkno::InformacjeOkno(GlowneOkno* glowneOkno, QWidget *parent)
+InformacjeOkno::InformacjeOkno(QWidget *parent)
     : QWidget(parent)
-    , m_glowneOkno(glowneOkno)
+    , ui(new Ui::InformacjeOkno)
 {
-    connect(m_glowneOkno->ui->pushButtonPowrot, SIGNAL(clicked()), this, SLOT(powrot()));
+    ui->setupUi(this);
+    connect(ui->pushButtonPowrot, SIGNAL(clicked()), this, SLOT(powrot()));
 }
 
 InformacjeOkno::~InformacjeOkno()
 {
+    delete ui;
 }
 
 void InformacjeOkno::powrot()
 {
-    qDebug() << "Przycisk powrót został naciśnięty.";
-    m_glowneOkno->setWindowTitle("Zmiana2");
-    m_glowneOkno->ui->stackedWidget->setCurrentIndex(0);
-    InformacjeOkno::~InformacjeOkno();
+    qDebug() << "Przycisk InformacjeOkno::powrot() został naciśnięty.";
+    emit PowrotKlikniety();
 }
